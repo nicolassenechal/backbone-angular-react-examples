@@ -8,7 +8,9 @@ class AppComponent extends Component {
         super();
         this.state = {};
         TripService.getTrip().then((state) => {
-            this.setState(state);
+            if (state) {
+                this.setState(state);
+            }
         });
     }
 
