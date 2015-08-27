@@ -29,7 +29,7 @@ class Stop extends Component {
     }
 
     render () {
-        return <li className={this.getClassName()}>
+        return (<li className={this.getClassName()}>
             <div>
                 <span>{this.props.callingPoint.scheduled}</span>
             </div>
@@ -38,7 +38,7 @@ class Stop extends Component {
                 <span>{this.getLateness()}</span>
                 <span>Platform <bold>{this.getPlatform()}</bold></span>
             </div>
-        </li>;
+        </li>);
     }
 }
 

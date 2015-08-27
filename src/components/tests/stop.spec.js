@@ -5,6 +5,7 @@ const TestUtils = React.addons.TestUtils;
 
 describe('The Stop component', function () {
 
+    /*eslint complexity:0*/
     const getComponent = (props) => {
 
         props = props || {};
@@ -16,11 +17,11 @@ describe('The Stop component', function () {
             actual: (props.actual || undefined),
             expected: (props.expected || '10:10')
         };
-        return <Stop callingPoint={callingPoint}
+        return (<Stop callingPoint={callingPoint}
                     first={props.first || false}
                     last={props.last || false}
 
-            />;
+            />);
     };
 
     beforeEach(() => {

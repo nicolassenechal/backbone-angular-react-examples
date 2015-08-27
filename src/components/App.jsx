@@ -18,9 +18,10 @@ class AppComponent extends Component {
         if (this.state.journey) {
             return (
                 <div>
-                    <Header scheduled={this.state.journey.scheduled}
+                    <Header destination={this.state.journey.destination}
                             origin={this.state.journey.origin}
-                            destination={this.state.journey.destination}/>
+                            scheduled={this.state.journey.scheduled}
+                    />
                     <StopList callingPoints={this.state.callingPoints}/>
                 </div>
             );

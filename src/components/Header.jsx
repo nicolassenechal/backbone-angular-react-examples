@@ -14,9 +14,9 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-    scheduled: React.PropTypes.string.isRequired,
+    destination: React.PropTypes.string.isRequired,
     origin: React.PropTypes.string.isRequired,
-    destination: React.PropTypes.string.isRequired
+    scheduled: React.PropTypes.string.isRequired
 };
 
 

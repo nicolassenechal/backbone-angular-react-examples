@@ -28,17 +28,17 @@ describe('The StopList Component', function () {
 
     it('has a first Stop with props of callingPoint A, first true, last false', () => {
         var stop = this.renderedComponent.props.children.props.children[0];
-        expect(stop).toEqual(<Stop key={0} callingPoint={{a: 'A'}} first={true} last={false} />);
+        expect(stop).toEqual(<Stop callingPoint={{a: 'A'}} first={true} key={0} last={false} />);
     });
 
     it('has a first Stop with props of callingPoint B, first false, last false', () => {
         var stop = this.renderedComponent.props.children.props.children[1];
-        expect(stop).toEqual(<Stop key={1} callingPoint={{a: 'B'}} first={false} last={false} />);
+        expect(stop).toEqual(<Stop callingPoint={{a: 'B'}} first={false} key={1} last={false} />);
     });
 
     it('has a first Stop with props of callingPoint C, first false, last true', () => {
         var stop = this.renderedComponent.props.children.props.children[2];
-        expect(stop).toEqual(<Stop key={2} callingPoint={{a: 'C'}} first={false} last={true} />);
+        expect(stop).toEqual(<Stop callingPoint={{a: 'C'}} first={false} key={2} last={true} />);
     });
 
 });

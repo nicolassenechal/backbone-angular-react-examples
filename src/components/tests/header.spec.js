@@ -7,7 +7,10 @@ describe('Header Component', function () {
 
     beforeEach(() => {
         var shallowRenderer = TestUtils.createRenderer();
-        shallowRenderer.render(<Header scheduled='10:10' origin='London' destination='Tumbuctu' />);
+        shallowRenderer.render(<Header destination='Tumbuctu'
+                                       origin='London'
+                                       scheduled='10:10'
+        />);
         this.renderedComponent = shallowRenderer.getRenderOutput();
     });
 

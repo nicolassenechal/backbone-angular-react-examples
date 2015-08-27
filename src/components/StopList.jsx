@@ -8,7 +8,7 @@ class StopList extends Component {
         this.props.callingPoints.map( (callingPoint, index, array) => {
             const isFirst = (index === 0);
             const isLast = (index === array.length - 1);
-            stops.push(<Stop callingPoint={callingPoint} key={index} first={isFirst} last={isLast} />);
+            stops.push(<Stop callingPoint={callingPoint} first={isFirst} key={index} last={isLast} />);
         });
         return stops;
     }
