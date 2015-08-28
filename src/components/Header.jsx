@@ -5,9 +5,9 @@ class Header extends Component {
     render () {
         const text = this.props.origin + ' to ' + this.props.destination;
         return (
-            <header>
-                <span>{this.props.scheduled}</span>
-                <span>{text}</span>
+            <header className='header'>
+                <span className='header__span--time'><strong>{this.props.scheduled}</strong></span>
+                <span className='header__span--trip'>{text}</span>
             </header>
         );
     }

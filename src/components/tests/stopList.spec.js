@@ -16,6 +16,7 @@ describe('The StopList Component', function () {
 
     it('generates a section dom object', () => {
         expect(this.renderedComponent.type).toEqual('section');
+        expect(this.renderedComponent.props.className).toBe('stop-list');
     });
 
     it('creates a list of 3 Stops', () => {

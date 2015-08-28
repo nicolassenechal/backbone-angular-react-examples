@@ -1,0 +1,41 @@
+strong {
+    font-weight: bold;
+}
+
+.header {
+    background: grey;
+    padding: 0.5rem 5%;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header__span--time {
+    padding-right: 0.5rem;
+}
+
+.stop-list {
+    padding: 0 5%;
+    width: 90%;
+}
+
+.stop-list__ul {
+    padding: 0;
+}
+
+.stop {
+    list-style: none;
+}
+
+.stop--past {
+    color: grey;
+}
+
+.stop__div {
+    display: inline-block;
+}
+
+.stop__div--left {
+    width: 20%;
+}

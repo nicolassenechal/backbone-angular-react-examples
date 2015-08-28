@@ -16,8 +16,8 @@ class StopList extends Component {
     render () {
         const stops = this.generateStops();
         return (
-            <section>
-                <ul>
+            <section className='stop-list'>
+                <ul className='stop-list__ul'>
                     {stops}
                 </ul>
             </section>
