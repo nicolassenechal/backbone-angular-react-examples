@@ -33,14 +33,18 @@ describe('The Stop component', function () {
             platform: 3
         }));
         var renderedComponent = this.shallowRenderer.getRenderOutput();
-        expect(renderedComponent).toEqual(<li className=''>
-            <div>
-                <span>10:10</span>
+        expect(renderedComponent).toEqual(<li className='stop '>
+            <div className='stop__div stop__div--left'>
+                <p className='stop__p'><strong>10:10</strong></p>
+                {null}
             </div>
-            <div>
-                <span>London</span>
-                <span>On time</span>
-                <span>Platform <bold>3</bold></span>
+            <div className='stop__div stop__div--right'>
+                <p className='stop__p'>London</p>
+                <p>
+                    <span className=''>On time</span>
+                    <span className='stop__span--platform'>Platform <strong>3</strong></span>
+                </p>
+
             </div>
         </li>);
     });
@@ -48,14 +52,18 @@ describe('The Stop component', function () {
     it('uses - if the platform is not specified', () => {
         this.shallowRenderer.render(getComponent());
         var renderedComponent = this.shallowRenderer.getRenderOutput();
-        expect(renderedComponent).toEqual(<li className=''>
-            <div>
-                <span>10:10</span>
+        expect(renderedComponent).toEqual(<li className='stop '>
+            <div className='stop__div stop__div--left'>
+                <p className='stop__p'><strong>10:10</strong></p>
+                {null}
             </div>
-            <div>
-                <span>London</span>
-                <span>On time</span>
-                <span>Platform <bold>-</bold></span>
+            <div className='stop__div stop__div--right'>
+                <p className='stop__p'>London</p>
+                <p>
+                    <span className=''>On time</span>
+                    <span className='stop__span--platform'>Platform <strong>-</strong></span>
+                </p>
+
             </div>
         </li>);
     });
@@ -91,14 +99,18 @@ describe('The Stop component', function () {
             expected: '10:20'
         }));
         var renderedComponent = this.shallowRenderer.getRenderOutput();
-        expect(renderedComponent).toEqual(<li className=''>
-            <div>
-                <span>10:10</span>
+        expect(renderedComponent).toEqual(<li className='stop '>
+            <div className='stop__div stop__div--left'>
+                <p className='stop__p'><strong>10:10</strong></p>
+                <p className='stop__p stop__p--expected'>10:20</p>
             </div>
-            <div>
-                <span>London</span>
-                <span>10 minutes late</span>
-                <span>Platform <bold>3</bold></span>
+            <div className='stop__div stop__div--right'>
+                <p className='stop__p'>London</p>
+                <p>
+                    <span className='stop__span--late'>10 minutes late</span>
+                    <span className='stop__span--platform'>Platform <strong>3</strong></span>
+                </p>
+
             </div>
         </li>);
     });
