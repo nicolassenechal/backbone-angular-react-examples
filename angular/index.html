@@ -1,15 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="tlApp">
 <head>
   <meta charset="utf-8">
   <title>Trainline exercise</title>
   <link href="../css/style.css" rel="stylesheet">
 </head>
-<body>
+<body ng-controller="StopListCtrl">
 
-  <div class="view-container">
-    <div ng-view class="view-frame"></div>
-  </div>
+<div>
+
+  <header class='header'>
+    <span class='header__span--time'><strong ng-bind='results.journey.scheduled'></strong></span>
+    <span class='header__span--trip' ng-bind='trip'></span>
+  </header>
+
+</div>
 
   <script src="./dist/app.js"></script>
 </body>

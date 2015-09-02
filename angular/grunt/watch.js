@@ -5,7 +5,7 @@ module.exports = {
             spawn: false
         },
         files: [
-            'src/**/*'
+            'js/*'
         ],
         tasks: ['uglify']
     }

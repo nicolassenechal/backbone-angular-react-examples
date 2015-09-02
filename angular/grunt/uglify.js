@@ -1,7 +1,7 @@
 var files = {
     'dist/app.js': [
         'lib/*.js',
-        'src/**/*.js'
+        'js/*.js'
     ]
 };
 
