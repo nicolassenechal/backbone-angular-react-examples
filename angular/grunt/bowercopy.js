@@ -7,7 +7,8 @@ module.exports = {
             destPrefix: 'lib'
         },
         files: {
-            'angular.js': 'angular/angular.js'
+            'angular.js': 'angular/angular.js',
+            'moment.js': 'moment/moment.js'
         }
     }
 };

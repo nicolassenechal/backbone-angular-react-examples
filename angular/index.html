@@ -14,6 +14,24 @@
     <span class='header__span--trip' ng-bind='trip'></span>
   </header>
 
+  <section class='stop-list'>
+    <ul class='stop-list__ul'>
+      <li ng-repeat='callingPoint in results.callingPoints' class='{{callingPoint.classes}}'>
+            <div class='stop__div stop__div--left'>
+                <p class='stop__p'><strong>{{callingPoint.scheduled}}</strong></p>
+                <p className='stop__p stop__p--expected'>{{callingPoint.expectedText}}</p>
+            </div>
+            <div class='stop__div stop__div--right'>
+                <p class='stop__p'>{{callingPoint.station}}</p>
+                <p>
+                    <span class={{callingPoint.lateClass}}>{{callingPoint.lateness}}</span>
+                    <span class='stop__span--platform'>Platform <strong>{{callingPoint.platform}}</strong></span>
+                </p>
+            </div>
+      </li>
+    </ul>
+  </section>
+
 </div>
 
   <script src="./dist/app.js"></script>
