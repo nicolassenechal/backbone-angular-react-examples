@@ -2,13 +2,13 @@ import App from '../../app';
 import stopsController from './list/stopsController';
 
 var stopsApp = {
-    list: function () {
-        stopsController.list();
+    list: function (callingPoints) {
+        stopsController.list(callingPoints);
     }
 };
 
-App.addInitializer(function () {
-    stopsApp.list();
+App.addInitializer(function (options) {
+    stopsApp.list(options.callingPoints);
 });
 
 export default stopsApp;

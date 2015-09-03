@@ -2,13 +2,13 @@ import App from '../../app';
 import headerController from './show/headerController';
 
 var headerApp = {
-    show: function () {
-        headerController.show();
+    show: function (journey) {
+        headerController.show(journey);
     }
 };
 
-App.addInitializer(function () {
-    headerApp.show();
+App.addInitializer(function (options) {
+    headerApp.show(options.journey);
 });
 
 export default headerApp;

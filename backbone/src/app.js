@@ -9,6 +9,7 @@ App.addRegions({
 });
 
 App.on('start', function (options) {
+    console.log(options)
     if (Backbone.history) {
         Backbone.history.start({ pushState: true });
     }
