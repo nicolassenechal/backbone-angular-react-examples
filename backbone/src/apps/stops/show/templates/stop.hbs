@@ -1,0 +1,11 @@
+<div class='stop__div stop__div--left'>
+    <p class='stop__p'><strong>{{scheduled}}</strong></p>
+    {{#if isLate}}<p className='stop__p stop__p--expected'>{{expected}}</p>{{/if}}
+</div>
+<div class='stop__div stop__div--right'>
+    <p class='stop__p'>{{station}}</p>
+    <p>
+        <span {{#if isLate}}class='stop__span--late'{{/if}}>{{lateness}}</span>
+        <span class='stop__span--platform'>Platform <strong>{{platform}}</strong></span>
+    </p>
+</div>
