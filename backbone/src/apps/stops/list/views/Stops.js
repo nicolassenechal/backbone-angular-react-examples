@@ -4,6 +4,7 @@ import Stop from'../../show/views/Stop';
 
 var Stops = Marionette.CollectionView.extend({
     className: 'hotels',
+    tagName: 'stop-list__ul',
     childView: Stop
 });
 

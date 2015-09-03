@@ -1,12 +1,10 @@
-import {} from './views/header';
+import './views/header';
 import App  from '../../../app';
 
 var headerController = {
-    show: function () {
-        App.vent.on('service:trip:success', function (response) {
-            var header = App.request('show:header:view', response.journey);
-            App.header.show(header);
-        });
+    show: function (journey) {
+        var header = App.request('show:header:view', journey);
+        App.header.show(header);
     }
 };
 
