@@ -11,6 +11,9 @@ var Journey = Backbone.Model.extend({
 
 var Stop = Backbone.Model.extend({
    parse: function (data) {
+
+       console.log(arguments)
+
        data.platform = data.platform ? data.platform : '-';
        data.isLate = (data.scheduled !== data.expected);
 
@@ -26,7 +29,12 @@ var Stop = Backbone.Model.extend({
 });
 
 var StopCollection = Backbone.Collection.extend({
-   model: Stop
+    model: Stop,
+    parse: function (data) {
+        data[0].first = true;
+        data[data.length - 1].last = true;
+        return data;
+    }
 });
 
 
