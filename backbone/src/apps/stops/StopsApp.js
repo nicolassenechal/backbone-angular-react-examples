@@ -1,5 +1,5 @@
 import App from '../../app';
-import stopsController from './list/stopsController';
+import stopsController from './list/StopsController';
 
 var stopsApp = {
     list: function (callingPoints) {

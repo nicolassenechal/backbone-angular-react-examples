@@ -1,4 +1,4 @@
-import './views/stops';
+import './views/Stops';
 import App  from '../../../app';
 
 var stopsController = {

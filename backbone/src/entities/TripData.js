@@ -34,8 +34,6 @@ var StopCollection = Backbone.Collection.extend({
     }
 });
 
-
-
 App.reqres.setHandler('new:journey:entities', function (data) {
     return new Journey(data.journey, {parse: true});
 });
@@ -43,3 +41,5 @@ App.reqres.setHandler('new:journey:entities', function (data) {
 App.reqres.setHandler('new:callingPoints:entities', function (data) {
     return new StopCollection(data.callingPoints, {parse: true});
 });
+
+export {Journey, Stop, StopCollection};

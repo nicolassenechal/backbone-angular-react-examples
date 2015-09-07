@@ -1,4 +1,4 @@
-import './views/header';
+import './views/Header';
 import App  from '../../../app';
 
 var headerController = {

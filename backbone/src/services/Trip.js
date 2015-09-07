@@ -52,7 +52,7 @@ var Trip = {
     }
 };
 
-App.reqres.setHandler('service:trip', function (data) {
+App.reqres.setHandler('service:trip', function () {
     return new Trip.getTrip();
 });
 

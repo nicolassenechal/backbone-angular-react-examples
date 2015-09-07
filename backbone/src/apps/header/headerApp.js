@@ -1,5 +1,5 @@
 import App from '../../app';
-import headerController from './show/headerController';
+import headerController from './show/HeaderController';
 
 var headerApp = {
     show: function (journey) {
