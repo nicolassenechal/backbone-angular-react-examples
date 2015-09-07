@@ -7,16 +7,16 @@ describe('The TripData module', function () {
     describe('Journey', () => {
 
         it('extends Backbone.Model', () => {
-           expect(new Journey() instanceof Backbone.Model).toBe(true);
+            expect(new Journey() instanceof Backbone.Model).toBe(true);
         });
 
         it('parses the data as expected', () => {
-           var journey = new Journey({
-               origin: 'a',
-               destination: 'b'
-           }, {
-               parse: true
-           });
+            var journey = new Journey({
+                origin: 'a',
+                destination: 'b'
+            }, {
+                parse: true
+            });
             expect(journey.get('text')).toBe('a to b');
         });
 
@@ -54,6 +54,5 @@ describe('The TripData module', function () {
         });
 
     });
-
 
 });

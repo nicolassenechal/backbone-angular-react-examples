@@ -10,19 +10,19 @@ var Journey = Backbone.Model.extend({
 });
 
 var Stop = Backbone.Model.extend({
-   parse: function (data) {
-       data.platform = data.platform ? data.platform : '-';
-       data.isLate = (data.scheduled !== data.expected);
+    parse: function (data) {
+        data.platform = data.platform ? data.platform : '-';
+        data.isLate = (data.scheduled !== data.expected);
 
-       if (data.isLate) {
-           var scheduled = moment(data.scheduled, 'HH:mm');
-           var expected = moment(data.expected, 'HH:mm');
-           data.lateness = expected.diff(scheduled, 'minutes') + ' minutes late';
-       } else {
-           data.lateness = 'On time';
-       }
-       return data;
-   }
+        if (data.isLate) {
+            var scheduled = moment(data.scheduled, 'HH:mm');
+            var expected = moment(data.expected, 'HH:mm');
+            data.lateness = expected.diff(scheduled, 'minutes') + ' minutes late';
+        } else {
+            data.lateness = 'On time';
+        }
+        return data;
+    }
 });
 
 var StopCollection = Backbone.Collection.extend({
